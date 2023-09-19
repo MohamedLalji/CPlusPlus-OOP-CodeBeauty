@@ -41,7 +41,8 @@ public:
 	}
 
 	void Unsubscribe() {
-		subscribersCount--;
+		if (subscribersCount > 0)
+			subscribersCount--;
 	}
 
 	// Accesses the private attribute publishedVideos
